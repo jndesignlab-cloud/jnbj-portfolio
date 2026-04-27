@@ -302,53 +302,7 @@ li {
   background: var(--accent);
 }
 
-/* ================= DARK MODE ================= */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #111827;
-    --surface: #171923;
-    --text: #f9fafb;
-    --dark: #cbd5e1;
-    --border: #2d3340;
-  }
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-  }
-
-  .card,
-  .profile-card {
-    background: var(--surface);
-    border-color: var(--border);
-  }
-
-  .hero,
-  .contact {
-    background: linear-gradient(135deg, #171923, #111827);
-  }
-
-  .tags span,
-  .feature-list span,
-  .cert-grid span,
-  .tech-stack-item,
-  .bar {
-    background: #1f2937;
-    border-color: var(--border);
-  }
-
-  p,
-  li,
-  .meta,
-  .skill-item div:first-child {
-    color: var(--dark);
-  }
-
-  .button,
-  .contact-links a {
-    background: var(--accent);
-  }
-}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 800px) {
