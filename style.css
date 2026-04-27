@@ -38,6 +38,26 @@ body {
   border-radius: 18px;
   padding: 24px;
   box-shadow: 0 8px 24px rgba(59, 63, 140, 0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  animation: fadeUp 0.35s ease both;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(59, 63, 140, 0.12);
+  border-color: rgba(59, 63, 140, 0.25);
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ================= HERO ================= */
@@ -119,7 +139,7 @@ p {
   font-weight: 700;
 }
 
-/* ================= PROFILE CARD ================= */
+/* ================= PROFILE ================= */
 .profile-card {
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -184,7 +204,7 @@ p {
   border-radius: 999px;
 }
 
-/* ================= TECH STACK (CLEAN) ================= */
+/* ================= TECH STACK ================= */
 .tech-stack-list {
   display: grid;
   gap: 12px;
@@ -280,6 +300,54 @@ li {
 
 .contact-links a:hover {
   background: var(--accent);
+}
+
+/* ================= DARK MODE ================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111827;
+    --surface: #171923;
+    --text: #f9fafb;
+    --dark: #cbd5e1;
+    --border: #2d3340;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .card,
+  .profile-card {
+    background: var(--surface);
+    border-color: var(--border);
+  }
+
+  .hero,
+  .contact {
+    background: linear-gradient(135deg, #171923, #111827);
+  }
+
+  .tags span,
+  .feature-list span,
+  .cert-grid span,
+  .tech-stack-item,
+  .bar {
+    background: #1f2937;
+    border-color: var(--border);
+  }
+
+  p,
+  li,
+  .meta,
+  .skill-item div:first-child {
+    color: var(--dark);
+  }
+
+  .button,
+  .contact-links a {
+    background: var(--accent);
+  }
 }
 
 /* ================= RESPONSIVE ================= */
