@@ -371,4 +371,87 @@ li {
   .hero {
     padding: 26px;
   }
+
+  .hero {
+  position: relative;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(59, 63, 140, 0.18);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(59, 63, 140, 0.08);
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(59, 63, 140, 0.14);
+}
+
+.toggle-icon {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 0.78rem;
+}
+
+.toggle-text {
+  line-height: 1;
+}
+
+/* Manual Dark Mode */
+body.dark {
+  --bg: #111827;
+  --surface: #171923;
+  --text: #f9fafb;
+  --dark: #cbd5e1;
+  --border: #2d3340;
+}
+
+body.dark .hero,
+body.dark .contact {
+  background: linear-gradient(135deg, #171923, #111827);
+}
+
+body.dark .tags span,
+body.dark .feature-list span,
+body.dark .cert-grid span,
+body.dark .tech-stack-item,
+body.dark .bar {
+  background: #1f2937;
+  border-color: var(--border);
+}
+
+body.dark .theme-toggle {
+  background: rgba(23, 25, 35, 0.65);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+body.dark .toggle-icon {
+  background: var(--accent);
+}
+
+body.dark .button,
+body.dark .contact-links a {
+  background: var(--accent);
+}
 }
