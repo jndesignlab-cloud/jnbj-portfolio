@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
+:root {
+  --primary: #3B3F8C;
+  --accent: #F26A63;
+  --background: #F4F4F6;
+  --dark: #555962;
+  --text: #111827;
+  --muted: #555962;
+  --border: #e2e3e8;
+  --surface: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,8 +19,8 @@
 
 body {
   font-family: 'Inter', Arial, sans-serif;
-  background: #ffffff;
-  color: #111827;
+  background: var(--background);
+  color: var(--text);
 }
 
 .container {
@@ -19,17 +30,17 @@ body {
 }
 
 .card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 18px;
   padding: 24px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 24px rgba(59, 63, 140, 0.08);
 }
 
 .hero {
   margin-bottom: 24px;
   padding: 36px;
-  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  background: linear-gradient(135deg, #ffffff, var(--background));
 }
 
 .hero-content {
@@ -44,7 +55,7 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #406f27;
+  color: var(--accent);
   margin-bottom: 10px;
 }
 
@@ -53,24 +64,27 @@ h1 {
   line-height: 1.05;
   font-weight: 800;
   margin-bottom: 14px;
+  color: var(--primary);
 }
 
 h2 {
   font-size: 1.2rem;
   font-weight: 800;
   margin-bottom: 14px;
+  color: var(--primary);
 }
 
 h3 {
   font-size: 1rem;
   font-weight: 800;
   margin-bottom: 4px;
+  color: var(--primary);
 }
 
 p {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--dark);
 }
 
 .subtitle {
@@ -93,8 +107,9 @@ p {
 .feature-list span,
 .chip-grid span,
 .cert-grid span {
-  background: #f1f5f9;
-  border: 1px solid #e5e7eb;
+  background: var(--background);
+  border: 1px solid var(--border);
+  color: var(--primary);
   padding: 8px 12px;
   border-radius: 999px;
   font-size: 0.82rem;
@@ -102,7 +117,7 @@ p {
 }
 
 .profile-card {
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 22px;
   background: #ffffff;
@@ -112,7 +127,7 @@ p {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background: #263f77;
+  background: var(--primary);
   color: #ffffff;
   display: grid;
   place-items: center;
@@ -132,7 +147,8 @@ p {
 }
 
 .featured {
-  background: #f8fafc;
+  background: #ffffff;
+  border-top: 4px solid var(--accent);
 }
 
 .skill-item {
@@ -145,11 +161,12 @@ p {
   margin-bottom: 7px;
   font-size: 0.88rem;
   font-weight: 700;
+  color: var(--dark);
 }
 
 .bar {
   height: 8px;
-  background: #e5e7eb;
+  background: var(--background);
   border-radius: 999px;
   overflow: hidden;
 }
@@ -157,7 +174,7 @@ p {
 .bar span {
   display: block;
   height: 100%;
-  background: #406f27;
+  background: var(--primary);
   border-radius: 999px;
 }
 
@@ -166,16 +183,20 @@ p {
   margin-top: 18px;
   padding: 11px 16px;
   border-radius: 999px;
-  background: #406f27;
+  background: var(--primary);
   color: #ffffff;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 800;
 }
 
+.button:hover {
+  background: var(--accent);
+}
+
 .experience-item {
   padding: 16px 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border);
 }
 
 .experience-item:last-child {
@@ -183,14 +204,14 @@ p {
 }
 
 .meta {
-  color: #6b7280;
+  color: var(--muted);
   font-size: 0.88rem;
   margin-bottom: 8px;
 }
 
 ul {
   padding-left: 20px;
-  color: #4b5563;
+  color: var(--dark);
 }
 
 li {
@@ -204,7 +225,8 @@ li {
 
 .contact {
   text-align: center;
-  background: #f8fafc;
+  background: linear-gradient(135deg, #ffffff, var(--background));
+  border-top: 4px solid var(--primary);
 }
 
 .contact-links {
@@ -214,12 +236,16 @@ li {
 
 .contact-links a {
   text-decoration: none;
-  background: #111827;
+  background: var(--primary);
   color: #ffffff;
   padding: 9px 14px;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 800;
+}
+
+.contact-links a:hover {
+  background: var(--accent);
 }
 
 @media (max-width: 800px) {
