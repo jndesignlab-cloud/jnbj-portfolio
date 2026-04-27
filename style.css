@@ -103,6 +103,15 @@ p {
   gap: 8px;
 }
 
+.tech-group {
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin: 14px 0 6px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 .tags span,
 .feature-list span,
 .chip-grid span,
