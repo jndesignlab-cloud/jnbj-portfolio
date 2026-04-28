@@ -19,6 +19,7 @@
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
+  color: var(--text);
 }
 
 .container {
@@ -32,8 +33,8 @@ body {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 20px;
-  transition: 0.25s;
+  padding: 22px;
+  transition: 0.25s ease;
 }
 
 .card:hover {
@@ -42,20 +43,49 @@ body {
 
 /* HERO */
 .hero {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .hero-content {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 
+/* TEXT */
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--dark);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+p {
+  font-size: 0.9rem;
+  color: var(--dark);
+}
+
+/* PROFILE */
 .avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background: var(--primary);
-  color: #fff;
+  color: white;
   display: grid;
   place-items: center;
 }
@@ -75,24 +105,39 @@ body {
 .featured-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 20px;
 }
 
 .featured-img {
   width: 100%;
-  height: 160px;
+  height: 180px;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 10px;
 }
 
+/* TAGS */
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.feature-list span {
+  background: var(--bg);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
 /* BUTTON */
 .button {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 12px;
   padding: 8px 12px;
   background: var(--primary);
-  color: #fff;
+  color: white;
   border-radius: 999px;
   text-decoration: none;
 }
@@ -102,7 +147,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  margin-top: 10px;
 }
 
 .project-card {
@@ -122,19 +166,13 @@ body {
 }
 
 .project-card:hover {
-  background: #e9e9ee;
+  background: #e8e8ee;
 }
 
 /* RESPONSIVE */
 @media (max-width: 800px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .featured-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .portfolio-grid,
+  .featured-grid,
   .projects-grid {
     grid-template-columns: 1fr;
   }
